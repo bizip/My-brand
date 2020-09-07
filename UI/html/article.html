@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+    <!-- <script src="../js/main.js"></script> -->
+
+
+    <title>New article | Bizimungu pascal</title>
+</head>
+
+<body>
+    <!-- This is header parts containing only landing pages and navigation -->
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navigation__toggle">
+        <label for="navigation__toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <li class="navigation__item"><a href="../index.html" class="navigation__link">About</a></li>
+            <li class="navigation__item"><a href="./contact.html" class="navigation__link">Contact</a></li>
+            <li class="navigation__item"><a href="./blog.html" class="navigation__link">Blog</a></li>
+            <li class="navigation__item"><a href="../html/login.html" class="navigation__link">Login</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <nav class="navbar dark">
+        <div class="row">
+            <img src="../asset/images/bzp-logo.png" alt="bzp logo" class="logo">
+            <ul class="main-nav">
+                <li><a href="../index.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <section id="subscribe">
+        <div class="container1">
+            <h1>Subscribe to for news letter</h1>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Your email" id="email">
+                <button type="submit" class="button1">Subscribe</button>
+            </form>
+
+        </div>
+    </section>
+
+
+    <section id="blog__nav">
+        <ul>
+            <li>
+                <a href="./blog.html">All articles</a>
+            </li>
+            <li>
+                <a href="./article.html">New article</a>
+            </li>
+            <li>
+                <a href="./question.html">All Question</a>
+            </li>
+        </ul>
+    </section>
+    <section id="all__blog">
+        <div class="all__blog">
+            <div class="item">
+                <div class="article">
+                    <div class="new__blog" id="new__post">
+
+                        <h3>New post</h3>
+                        <p id="error__message"></p>
+                        <form action="#" method="post" name="new_blog" id="new_blog">
+                            <div class="text1">
+                                <label for="title">Title:</label>
+                                <input type="text" name="title" id="title" placeholder="title">
+                            </div>
+                            <div class="text1">
+                                <label for="post1">Your Post:</label>
+                                <!-- <textarea id="post1" type="post" placeholder="Post Content"> -->
+                                <textarea id="textarea" name="textarea" rows="5" cols="33">
+                                                        Write your post here...
+                                                        </textarea>
+                            </div>
+                            <div class="buttons">
+                                <button type="reset" id="ClearButton">Clear</button>
+                                <button type="submit" id="sbt">Send</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container footer">
+        <div class="media">
+            <ul class="ul__icon">
+                <li class="icon"><a class="social__media" href="https://twitter.com/BizimunguPasca9"><i class="fab fa-twitter"></i></a></li>
+                <li class="icon"><a class="social__media" href="https://web.facebook.com/bizimungu.pascalissa/"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="icon"><a class="social__media" href="https://github.com/bizip"><i class="fab fa-github"></i></a></li>
+                <li class="icon"><a class="social__media" href="https://www.linkedin.com/in/bizimungu/"><i class="fab fa-linkedin-in"></i></a></li>
+
+            </ul>
+        </div>
+        <div>
+            <ul class="ul__nav">
+                <li class="icon__nav"><b><a href="../index.html">HOME</a></b></li>
+                <li class="icon__nav"><b><a href="#aboutMe">ABOUT</a></b></li>
+                <li class="icon__nav"><b><a href="#">BLOG</a></b></li>
+                <li class="icon__nav"><b><a href="../html/contact.html">CONTACT</a></b></li>
+                <li class="icon__nav"><b><a href="../html/login.html">LOGIN</a></b></li>
+            </ul>
+            <p class="copyRight"><b>© 2020 Bizimungu Pascal. All rights reserved.</b></p>
+        </div>
+
+    </div>
+    <script defer src="../js/new__blog.js"></script>
+    <script src="https://kit.fontawesome.com/6e8f0d4349.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
