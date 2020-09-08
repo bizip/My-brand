@@ -4,10 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>stater file</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <script src="./js/main.js"></script>
+    <title>Home | Bizimungu pascal</title>
 </head>
 
 <body>
+    <!-- This is header parts containing only landing pages and navigation -->
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navigation__toggle">
+        <label for="navigation__toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#aboutMe" class="navigation__link">About</a></li>
+                <li class="navigation__item"><a href="./html/contact.html" class="navigation__link">Contact</a></li>
+                <li class="navigation__item"><a href="/html/blog.html" class="navigation__link">Blog</a></li>
+                <li class="navigation__item"><a href="./html/login.html" class="navigation__link">Login</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <header class="header">
+        <nav class="navbar">
+            <div class="row">
+                <img src="./asset/images/bzp-logo.png" alt="bzp logo" class="logo">
+                <ul class="main-nav">
+                    <li><a href="#aboutMe">About</a></li>
+                    <li><a href="./html/contact.html">Contact</a></li>
+                    <li><a href="./html/blog.html">Blog</a></li>
+                    <!-- <li><a href="./html/login.html">Login</a></li> -->
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Mr.&nbsp;Bizimungu Pascal</span>
+                <span class="heading-primary--sub">Software engeneer with 1<sup>+</sup> Year of experience</span>
+            </h1>
+            <a href="#" class="btn btn--gost">Join me</a>
+        </div>
+    </header>
+    <section class="about" id="aboutMe">
+        <h1 class="about-h1">WHAT I CAN DO</h1>
+
+        <div class="container">
+            <div class="item">
+                <h1 class="item__heading-2">Full Stack</h1>
+                <p class="item-text">Tongue t-bone ball tip, meatball capicola shoulder tail frankfurter salami. Brisket shankle flank bacon strip steak ball tip turducken bresaola pork pork loin ribeye ham hock.</p>
+            </div>
+            <div class="item">
+                <h1 class="heading-2">Products</h1>
+                <p class="item-text">Tongue t-bone ball tip, meatball capicola shoulder tail frankfurter salami. Brisket shankle flank bacon strip steak ball tip turducken bresaola pork pork loin ribeye ham hock.</p>
+            </div>
+            <div class="item">
+                <h1 class="heading-2">Skills</h1>
+                <p class="item-text">Tongue t-bone ball tip, meatball capicola shoulder tail frankfurter salami. Brisket shankle flank bacon strip steak ball tip turducken bresaola pork pork loin ribeye ham hock.</p>
+            </div>
+            <!--   <div class="item">4</div> -->
+            <!--   <div class="item">5</div> -->
+        </div>
+        <h1 class="about-h1">WHO I AM ?</h1>
+        <div class="container">
+            <div class="item me">
+                <img src="./asset/images/profile.jpg" alt="My profile pic" class="about__img">
+                <p class="item__text"> Bizimungu pascal<br> +250785855328 <br>bizip04@gmail.com<br> KK 125 St Kigali Rwanda.<br> I am software Engeneer.<br> I am loking for a job in a company.</p>
+                <div id="map">
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <div class="container footer">
+        <div class="media">
+            <ul class="ul__icon">
+                <li class="icon"><a class="social__media" href="https://twitter.com/BizimunguPasca9"><i class="fab fa-twitter"></i></a></li>
+                <li class="icon"><a class="social__media" href="https://web.facebook.com/bizimungu.pascalissa/"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="icon"><a class="social__media" href="https://github.com/bizip"><i class="fab fa-github"></i></a></li>
+                <li class="icon"><a class="social__media" href="https://www.linkedin.com/in/bizimungu/"><i class="fab fa-linkedin-in"></i></a></li>
+
+            </ul>
+        </div>
+        <div>
+            <ul class="ul__nav">
+                <li class="icon__nav"><b><a href="index.html">HOME</a></b></li>
+                <li class="icon__nav"><b><a href="#aboutMe">ABOUT</a></b></li>
+                <li class="icon__nav"><b><a href="./html/blog.html">BLOG</a></b></li>
+                <li class="icon__nav"><b><a href="./html/contact.html">CONTACT</a></b></li>
+                <li class="icon__nav"><b><a href="./html/login.html">LOGIN</a></b></li>
+            </ul>
+            <p class="copyRight"><b>© 2020 Bizimungu Pascal. All rights reserved.</b></p>
+        </div>
+
+    </div>
+    <script src="https://kit.fontawesome.com/6e8f0d4349.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTYv79hwbviN6Mfub5QdiXGWce6zpyCvo&callback=initMap" async defer></script> -->
 
 </body>
 
