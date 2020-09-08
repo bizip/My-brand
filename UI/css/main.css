@@ -1,0 +1,235 @@
+/* CSS variables */
+
+var(--color, #636e72);
+
+/* universal style */
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    display: inline-block;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: var(--color);
+    box-sizing: border-box;
+}
+
+
+/* Landing page */
+
+.header {
+    height: 100Vh;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.596)), url(../asset/images/a.png);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-15%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: rgb(247, 241, 241);
+    text-transform: uppercase;
+}
+
+.heading-primary--main {
+    display: block;
+    as font-size: 3.3rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding-top: 2rem;
+    font-style: italic;
+    letter-spacing: 0.8rem;
+}
+
+.logo {
+    height: 10rem;
+    width: auto;
+    float: left;
+    border-radius: 30%;
+}
+
+
+/* Reusable components  */
+
+
+/* Navbars */
+
+.main-nav {
+    float: right;
+    list-style: none;
+    padding-top: 1.5rem;
+}
+
+.row {
+    padding: 3rem;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 3rem;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #fff;
+}
+
+
+/* Buttons */
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 20rem;
+    color: #fff;
+}
+
+.btn--gost:link,
+.btn--gost:visited {
+    border: 1px solid rgb(172, 163, 163);
+}
+
+.btn--gost:hover,
+.btn--gost:active {
+    background-color: rgb(83, 66, 236);
+}
+
+.container {
+    background-color: #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: #F2EDED;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 30rem;
+    height: 25rem;
+    height: auto;
+}
+
+.about-h1 {
+    text-align: center;
+    display: absolute;
+    margin: 0;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.me {
+    width: 50rem;
+    height: auto;
+}
+
+.about {
+    background-color: #ccc;
+}
+
+.about__img {
+    border-radius: 50%;
+}
+
+.item__text {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.social__media {
+    color: white;
+}
+
+.icon {
+    list-style: none;
+    display: inline-block;
+    margin: 1rem 1rem;
+    font-size: 2.5rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #256EDC;
+    border-radius: 10%;
+}
+
+.ul__nav {
+    margin: 0;
+    padding: 0;
+}
+
+.icon__nav {
+    list-style: none;
+    display: inline;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.icon__nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 300;
+}
+
+.footer {
+    background-color: #484848;
+    display: block;
+    text-align: center;
+}
+
+.media {
+    flex: wrap;
+}
+
+.copyRight {
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 0.2rem;
+}
+
+#map {
+    height: 40rem;
+    width: 100%;
+    border-radius: 5%;
+}
