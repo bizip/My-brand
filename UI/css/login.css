@@ -10,3 +10,11 @@
     margin-top: 18rem;
     font-weight: 700;
 }
+
+.alert__message {
+    background-color: #79c879;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+}

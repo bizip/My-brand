@@ -112,11 +112,3 @@ form button {
     border-radius: 20%;
     color: #fff;
 }
-
-.alert__message {
-    background-color: #79c879;
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
-    display: block;
-}

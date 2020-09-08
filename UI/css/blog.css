@@ -131,3 +131,11 @@
 .show {
     background-color: rgb(9, 40, 97);
 }
+
+.alert__message {
+    background-color: #79c879;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+}
