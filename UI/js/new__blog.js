@@ -17,10 +17,17 @@ new_blog_form.addEventListener("submit", (e) => {
     } else {
         let notification = document.querySelector("#error__message");
         notification.classList.add("alert__message");
-        notification.textContent = "Your message has been sent thank you.";
-        setTimeout(() => {
+        notification.textContent = "Your article has been posted thank you.";
+        // //save message into fire base
+        db.collection("articles").add({
+
+            title: new_blog_form.title.value,
+            post: new_blog_form.textarea.value
+        }).then(() => {
             window.location.reload();
-        }, 3000);
+        }).catch((err) => {
+            console.log(err);
+        });
 
 
     }
