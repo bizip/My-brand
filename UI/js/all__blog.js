@@ -21,7 +21,17 @@ let renderBlog = (doc) => {
     dlt.addEventListener('click', (e) => {
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id');
-        // db.collection('articles').doc(id1).delete;
+
+        db.collection('articles').doc(id).delete().then(function() {
+            let deletDoc = document.getElementById("deleteArticle");
+            deletDoc.textContent = "Document successfully deleted!";
+            deletDoc.className = "alert__message";
+            setTimeout(() => {
+                window.location.reload();
+            }, 4000);
+        }).catch(function(error) {
+            console.error("Error removing document: ", error);
+        });;
     });
 
 }
