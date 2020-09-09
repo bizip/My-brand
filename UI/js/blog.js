@@ -38,8 +38,6 @@ let renderQuery = (doc) => {
         }).catch(function(error) {
             console.error("Error removing document: ", error);
         });;
-
-
     });
 
 }
