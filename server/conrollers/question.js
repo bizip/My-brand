@@ -1,4 +1,14 @@
 import Questions from '../models/questions';
+//get all the post
+exports.getQuestion = (req, res, next) => {
+        Questions.find().then(result => {
+            res.json({
+                message: "list of all posts",
+                data: result
+            });
+        });
+    }
+    //send a question
 exports.sendQuestion = (req, res, next) => {
     const fullName = req.body.fullName;
     const email = req.body.email;
