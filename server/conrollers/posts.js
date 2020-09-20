@@ -52,9 +52,7 @@ exports.updateOnePosts = (req, res, next) => {
     const postId = req.params.id;
     Posts.findById(postId).then(result => {
             if (!result) {
-                const error = new error("can not Update nothing");
-                error.statuscode = 404;
-                throw error;
+                console.log("error");
             }
             result.title = title;
             result.content = content;
