@@ -34,3 +34,14 @@ exports.createPosts = (req, res, next) => {
         console.log(err);
     });
 };
+//get single post
+exports.getOnePosts = (req, res, next) => {
+    const postId = req.params.id;
+    Posts.findById(postId).then(result => {
+        res.json({
+            message: "Single post is found pascal",
+            data: result
+        });
+    });
+
+};

@@ -8,4 +8,6 @@ router.get('/', postController.getLanding);
 router.get('/posts', postController.getPosts);
 // create single post
 router.post('/posts', postController.createPosts);
+// Get single post
+router.get('/posts/:id', postController.getOnePosts);
 module.exports = router;
