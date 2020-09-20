@@ -67,3 +67,20 @@ exports.updateOnePosts = (req, res, next) => {
             console.log(err);
         });
 };
+//delete one post
+exports.deleteOnePosts = (req, res, next) => {
+    const postId = req.params.id;
+    Posts.findById(postId).then(result => {
+        return Posts.findOneAndDelete(postId).then(deletedone => {
+            res.json({
+                message: "Hey it is already deleted!",
+            });
+        }).catch(err => {
+            console.log(err);
+        });
+
+    }).catch(err => {
+        console.log(err);
+    });
+
+};

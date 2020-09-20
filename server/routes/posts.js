@@ -12,4 +12,6 @@ router.post('/posts', postController.createPosts);
 router.get('/posts/:id', postController.getOnePosts);
 // Upadte post
 router.patch('/posts/:id', postController.updateOnePosts);
+// Delete post
+router.delete('/posts/:id', postController.deleteOnePosts);
 module.exports = router;
