@@ -20,3 +20,21 @@ exports.sendQuestion = (req, res, next) => {
         console.log(err);
     });
 }
+
+//delete one post
+exports.deleteQuestion = (req, res, next) => {
+    const questionId = req.params.id;
+    Questions.findById(questionId).then(result => {
+        return Questions.findOneAndDelete(questionId).then(deletedone => {
+            res.json({
+                message: "You deleted this question",
+            });
+        }).catch(err => {
+            console.log(err);
+        });
+
+    }).catch(err => {
+        console.log(err);
+    });
+
+};
