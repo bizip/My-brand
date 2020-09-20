@@ -6,4 +6,6 @@ const router = express.Router();
 router.get('/', postController.getLanding);
 // Get all posts
 router.get('/posts', postController.getPosts);
+// create single post
+router.post('/posts', postController.createPosts);
 module.exports = router;

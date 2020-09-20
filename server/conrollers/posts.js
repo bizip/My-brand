@@ -16,3 +16,21 @@ exports.getPosts = (req, res, next) => {
         });
     });
 }
+
+//create one post
+exports.createPosts = (req, res, next) => {
+    const title = req.body.title;
+    const content = req.body.content;
+    const post = new Posts({
+        title: title,
+        content: content
+    });
+    post.save().then(result => {
+        res.json({
+            message: "successful created one post",
+            data: post
+        });
+    }).catch(err => {
+        console.log(err);
+    });
+};
