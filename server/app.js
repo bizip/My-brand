@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import postroute from './routes/posts';
+import questionroute from './routes/question';
 
 
 const app = express();
@@ -14,6 +15,7 @@ let db_ur = process.env.DB_URL;
 
 app.use(bodyParser.json());
 app.use('/', postroute);
+app.use(questionroute);
 
 
 //mongoose connection
