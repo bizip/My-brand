@@ -10,4 +10,6 @@ router.get('/posts', postController.getPosts);
 router.post('/posts', postController.createPosts);
 // Get single post
 router.get('/posts/:id', postController.getOnePosts);
+// Upadte post
+router.patch('/posts/:id', postController.updateOnePosts);
 module.exports = router;

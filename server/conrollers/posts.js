@@ -45,3 +45,27 @@ exports.getOnePosts = (req, res, next) => {
     });
 
 };
+//update one post
+exports.updateOnePosts = (req, res, next) => {
+    const title = req.body.title;
+    const content = req.body.content;
+    const postId = req.params.id;
+    Posts.findById(postId).then(result => {
+            if (!result) {
+                const error = new error("can not Update nothing");
+                error.statuscode = 404;
+                throw error;
+            }
+            result.title = title;
+            result.content = content;
+            return result.save().then(updatedPost => {
+                res.json({
+                    message: "Single post is found pascal",
+                    data: updatedPost
+                });
+            });
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
