@@ -4,9 +4,13 @@
     "description": "Recreated capstone project using nodejs",
     "main": "app.js",
     "dependencies": {
+        "bcrypt": "^5.0.0",
+        "cookie-parser": "^1.4.5",
         "express": "^4.17.1",
         "firebase-functions": "^3.11.0",
-        "mongoose": "^5.10.6"
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.10.6",
+        "validator": "^13.1.17"
     },
     "devDependencies": {
         "@babel/core": "^7.11.6",

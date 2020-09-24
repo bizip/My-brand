@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import postroute from './routes/posts';
 import questionroute from './routes/question';
+import authRoutes from './routes/authRoutes';
+import cookieParser from 'cookie-parser';
 
 
 const app = express();
@@ -16,6 +18,20 @@ let db_ur = process.env.DB_URL;
 app.use(bodyParser.json());
 app.use('/', postroute);
 app.use(questionroute);
+app.use(authRoutes);
+app.use(cookieParser());
+//cookies
+app.get('/set-cookies', (req, res) => {
+    res.cookie('newUser', false);
+    res.cookie('isPascal', true);
+    res.json("you got the cookies");
+});
+
+app.get('/read-cookies', (req, res) => {
+    const cookies = req.cookies;
+    console.log(cookies);
+    res.json(cookies);
+});
 
 
 //mongoose connection
