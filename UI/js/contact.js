@@ -31,10 +31,14 @@ form.addEventListener("submit", (e) => {
         notification.classList.add("alert__message");
         notification.textContent = "Your message has been sent thank you.";
         //save message into fire base
-        setTimeout(() => {
+        db.collection("messages").add({
+            fullName: form.fullName.value,
+            email: form.email.value,
+            subject: form.subject.value,
+            message: form.textarea.value
+        }).then(() => {
             window.location.reload();
-        }, 3000);
-
+        });
 
     }
 });
