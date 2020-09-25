@@ -31,7 +31,7 @@ exports.sendQuestion = (req, res, next) => {
     });
 }
 
-//delete one post
+//delete one Question
 exports.deleteQuestion = (req, res, next) => {
     const questionId = req.params.id;
     Questions.findById(questionId).then(result => {

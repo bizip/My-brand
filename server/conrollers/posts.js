@@ -37,11 +37,12 @@ exports.createPosts = (req, res, next) => {
 //get single post
 exports.getOnePosts = (req, res, next) => {
     const postId = req.params.id;
-    Posts.findById(postId).then(result => {
-        res.json({
-            message: "Single post is found pascal",
-            data: result
-        });
+    Posts.findById(postId).populate("comments").exec((err, foundPost) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json({ foundPost });
+        }
     });
 
 };

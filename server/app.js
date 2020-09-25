@@ -5,6 +5,7 @@ import postroute from './routes/posts';
 import questionroute from './routes/question';
 import authRoutes from './routes/authRoutes';
 import cookieParser from 'cookie-parser';
+import commentRoutes from './routes/comments';
 
 
 const app = express();
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 app.use('/', postroute);
 app.use(questionroute);
 app.use(authRoutes);
+app.use(commentRoutes);
 app.use(cookieParser());
 //cookies
 app.get('/set-cookies', (req, res) => {

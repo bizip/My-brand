@@ -1,6 +1,5 @@
 import express from 'express';
 import postController from '../conrollers/posts';
-import isAuth from '../middleware/is_auth';
 const router = express.Router();
 import requireAuth from '../middleware/is_auth';
 
