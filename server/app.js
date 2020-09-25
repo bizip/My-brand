@@ -11,7 +11,6 @@ let db_ur = process.env.DB_URL;
 
 
 app.use(bodyParser.json());
-// app.use('/', postroute);
 
 
 //mongoose connection
