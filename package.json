@@ -1,0 +1,31 @@
+{
+    "name": "pascal-capstone-project",
+    "version": "1.0.0",
+    "description": "Recreated capstone project using nodejs",
+    "main": "app.js",
+    "dependencies": {
+        "express": "^4.17.1",
+        "firebase-functions": "^3.11.0",
+        "mongoose": "^5.10.6"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@babel/node": "^7.10.5",
+        "@babel/preset-env": "^7.11.5",
+        "dotenv": "^8.2.0",
+        "nodemon": "^2.0.4"
+    },
+    "scripts": {
+        "start": "nodemon --exec babel-node ./server/app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bizip/Pascal-capstone-project.git"
+    },
+    "author": "Bizimungu Pascal",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bizip/Pascal-capstone-project/issues"
+    },
+    "homepage": "https://github.com/bizip/Pascal-capstone-project#readme"
+}
