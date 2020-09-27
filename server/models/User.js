@@ -10,16 +10,24 @@ const userSchema = new mongoose.Schema({
         lowercase: true,
         validator: [isEmail, "Please enter the valid email"]
     },
+    fullName: {
+        type: String,
+        required: true
+    },
     password: {
         type: String,
         required: true
+    },
+    registeredAt: {
+        type: Date,
+        default: Date.now
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false
     }
 });
-//fire a function after usre is save in data baser
-// userSchema.post('save', function(doc, next) {
-//     console.log("new user was created ", doc);
-//     next();
-// });
+
 // fire the function before doc save to dataase
 userSchema.pre('save', async function(next) {
     const salt = await bcrypt.genSalt();

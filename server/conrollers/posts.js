@@ -31,7 +31,7 @@ exports.createPosts = (req, res, next) => {
             data: post
         });
     }).catch(err => {
-        console.log(err);
+        res.status(400).json({ Error: err.message });
     });
 };
 //get single post
@@ -39,7 +39,7 @@ exports.getOnePosts = (req, res, next) => {
     const postId = req.params.id;
     Posts.findById(postId).populate("comments").exec((err, foundPost) => {
         if (err) {
-            console.log(err);
+            res.status(500).json({ message: 'This post can not be found' });
         } else {
             res.json({ foundPost });
         }
@@ -59,29 +59,32 @@ exports.updateOnePosts = (req, res, next) => {
             result.content = content;
             return result.save().then(updatedPost => {
                 res.json({
-                    message: "Single post is found pascal",
+                    message: "Your post have been Updates",
                     data: updatedPost
                 });
             });
         })
         .catch(err => {
-            console.log(err);
+            res.status(400).json({ Error: err.message });
         });
 };
 //delete one post
 exports.deleteOnePosts = (req, res, next) => {
     const postId = req.params.id;
     Posts.findById(postId).then(result => {
+        if (!result) {
+            res.status(400).json({ message: 'This post has been deleted' });
+        }
         return Posts.findOneAndDelete(postId).then(deletedone => {
             res.json({
-                message: "Hey it is already deleted!",
+                message: "Post deleted successful",
             });
         }).catch(err => {
-            console.log(err);
+            res.status(400).json({ Error: err.message });
         });
 
     }).catch(err => {
-        console.log(err);
+        res.status(400).json({ Error: err.message });
     });
 
 };

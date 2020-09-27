@@ -5,7 +5,7 @@ import Post from '../models/posts';
 exports.getComment = (req, res) => {
     Comment.find().then(result => {
         res.json({
-            message: "list of all posts",
+            message: "List of all coments",
             data: result
         });
     });
@@ -18,7 +18,7 @@ exports.postComment = (req, res) => {
 
         Post.findById(req.params.id, (err, FoundPost) => {
             if (err) {
-                console.log(err);
+                res.status(400).json({ Error: err.message });
             } else {
                 const comment = new Comment({
                     text: text,
@@ -30,7 +30,7 @@ exports.postComment = (req, res) => {
                         data: comment
                     });
                 }).catch(err => {
-                    console.log(err);
+                    res.status(400).json({ Error: err.message });
                 });
             }
         })
@@ -40,18 +40,23 @@ exports.postComment = (req, res) => {
 exports.deleteComment = (req, res, next) => {
     const commentId = req.params.id;
     Comment.findById(commentId).then(result => {
+        if (!result) {
+            return res.status(400).json({
+                message: "We can not find this comment you are trying to delete"
+            });
+        }
         return Comment.findOneAndDelete(commentId).then(deletedone => {
             res.json({
-                message: "Already deleted!",
+                message: "This comment is successful deleted"
             });
         }).catch(err => {
             res.json({
-                message: "Con not be deleted!"
+                message: "Con not be deleted try again"
             });
         });
 
     }).catch(err => {
-        res.json({
+        res.status(400).json({
             message: "We can not find this comment you are trying to delete"
         });
     });

@@ -1,9 +1,9 @@
 import Questions from '../models/questions';
-//get all the post
+//get all the question
 exports.getQuestion = (req, res, next) => {
         Questions.find().then(result => {
             res.json({
-                message: "list of all posts",
+                message: "list of all Questions",
                 data: result
             });
         });

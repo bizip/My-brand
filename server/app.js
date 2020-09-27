@@ -22,20 +22,13 @@ app.use(questionroute);
 app.use(authRoutes);
 app.use(commentRoutes);
 app.use(cookieParser());
-//cookies
-app.get('/set-cookies', (req, res) => {
-    res.cookie('newUser', false);
-    res.cookie('isPascal', true);
-    res.json("you got the cookies");
+
+//adding 404 page when page not found and Error handling midle ware
+app.use((req, res, next) => {
+    res.status(404).json({
+        Message: "Page not found."
+    });
 });
-
-app.get('/read-cookies', (req, res) => {
-    const cookies = req.cookies;
-    console.log(cookies);
-    res.json(cookies);
-});
-
-
 //mongoose connection
 mongoose.connect(db_ur, {
     useUnifiedTopology: true,
