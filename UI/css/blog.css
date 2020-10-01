@@ -1,0 +1,141 @@
+#subscribe {
+    background-color: #E5E5E5;
+    text-align: right;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: black;
+}
+
+#subscribe h1 {
+    margin-bottom: 0;
+    padding-right: 2rem;
+}
+
+#subscribe form {
+    margin: 2rem;
+}
+
+#subscribe input[type="email"] {
+    height: 2rem;
+    border-radius: 20%;
+    width: 15rem;
+}
+
+#subscribe button {
+    background-color: #424c88;
+    height: 2.5rem;
+    color: #fff;
+    border-radius: 20%;
+    font-size: 1.5rem;
+}
+
+#blog__nav {
+    background-color: #E5E5E5;
+    text-align: center;
+}
+
+#blog__nav ul {
+    margin: 0;
+}
+
+#blog__nav li {
+    list-style: none;
+    display: inline-flex;
+    margin-left: 2rem;
+    color: black;
+    font-size: 1.5rem;
+}
+
+#blog__nav a {
+    text-decoration: none;
+}
+
+#all__blog .all__blog {
+    background-color: #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.item {
+    background-color: #FFF7F7;
+    margin: 1rem;
+    font-size: 2rem;
+    width: 90rem;
+    height: auto;
+    text-align: center;
+}
+
+.item1 {
+    background-color: #FFF7F7;
+    margin: 1rem;
+    font-size: 2rem;
+    width: auto;
+    height: auto;
+    text-align: left;
+    padding: 1rem;
+}
+
+.item .article {
+    text-align: left;
+    padding: 0;
+}
+
+.article h4 {
+    margin: 0rem 0rem 0px 0px;
+}
+
+.article p {
+    margin: 2rem 0px 0px 0px;
+}
+
+#like__icon {
+    float: left;
+}
+
+#views {
+    float: right;
+    padding-right: 3rem;
+    color: #5982A8;
+}
+
+#new__post {
+    text-align: center;
+}
+
+#new__post input[type="text"] {
+    background-color: #fff;
+    width: 70%;
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 10%;
+    border: 2px solid black;
+}
+
+#new__post label {
+    display: block;
+    padding: 1rem;
+}
+
+#new__post textarea {
+    width: 70%;
+    color: black;
+    font-size: 2rem;
+    height: 10rem;
+    background-color: #fff;
+}
+
+.show {
+    background-color: rgb(9, 40, 97);
+}
+
+.alert__message {
+    background-color: #79c879;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+}

@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/blog.css">
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
     <script src="../js/main.js"></script>
 
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/queries.css">
-    <link rel="stylesheet" href="../css/contact.css">
-    <link rel="stylesheet" href="../css/blog.css">
-    <title>Question | Bizimungu pascal</title>
+
+    <title>New article | Bizimungu pascal</title>
 </head>
 
 <body>
@@ -28,9 +29,9 @@
 
         <div class="navigation__background">&nbsp;</div>
         <nav class="navigation__nav">
-            <li class="navigation__item"><a href="index.html" class="navigation__link">About</a></li>
-            <li class="navigation__item"><a href="contact.html" class="navigation__link">Contact</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link">Blog</a></li>
+            <li class="navigation__item"><a href="../index.html" class="navigation__link">About</a></li>
+            <li class="navigation__item"><a href="./contact.html" class="navigation__link">Contact</a></li>
+            <li class="navigation__item"><a href="./blog.html" class="navigation__link">Blog</a></li>
             <li class="navigation__item"><a href="../html/login.html" class="navigation__link">Login</a></li>
             </ul>
         </nav>
@@ -41,9 +42,9 @@
             <img src="../asset/images/bzp-logo.png" alt="bzp logo" class="logo">
             <ul class="main-nav">
                 <li><a href="../index.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="../html/login.html">Login</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./login.html">Login</a></li>
             </ul>
         </div>
     </nav>
@@ -65,32 +66,46 @@
     <section id="blog__nav">
         <ul>
             <li>
-                <a href="blog.html">All articles</a>
+                <a href="./blog.html">All articles</a>
             </li>
             <li>
                 <a href="./article.html">New article</a>
             </li>
             <li>
-                <a href="question.html">All Question</a>
+                <a href="./question.html">All Question</a>
             </li>
         </ul>
     </section>
-    <p id="deleteDoc"></p>
     <section id="all__blog">
         <div class="all__blog">
-            <div class="item" id="single__article">
+            <div class="item">
+                <div class="article">
+                    <div class="new__blog" id="new__post">
 
-                
+                        <h3>New post</h3>
+                        <p id="error__message"></p>
+                        <form action="#" method="post" name="new_blog" id="new_blog">
+                            <div class="text1">
+                                <label for="title">Title:</label>
+                                <input type="text" name="title" id="title" placeholder="title">
+                            </div>
+                            <div class="text1">
+                                <label for="post1">Your Post:</label>
+                                <!-- <textarea id="post1" type="post" placeholder="Post Content"> -->
+                                <textarea id="textarea" name="textarea" rows="5" cols="33">
+                                                        Write your post here...
+                                                        </textarea>
+                            </div>
+                            <div class="buttons">
+                                <button type="reset" id="ClearButton">Clear</button>
+                                <button type="submit" id="sbt">Send</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
             </div>
-
-           
-
-               
-            </div>
-
         </div>
-
-
     </section>
 
     <div class="container footer">
@@ -115,7 +130,7 @@
         </div>
 
     </div>
-    <script src="../js/blog.js"></script>
+    <script defer src="../js/new__blog.js"></script>
     <script src="https://kit.fontawesome.com/6e8f0d4349.js" crossorigin="anonymous"></script>
 </body>
 

@@ -33,7 +33,7 @@ body {
 
 .header {
     height: 100Vh;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.596)), url(../asset/images/aa.png);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.596)), url(../asset/images/a.png);
     background-repeat: no-repeat;
     background-position: top;
 }
@@ -232,4 +232,12 @@ body {
     height: 40rem;
     width: 100%;
     border-radius: 5%;
+}
+
+.alert__message {
+    background-color: #79c879;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
 }
