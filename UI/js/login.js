@@ -10,7 +10,7 @@ form.addEventListener("submit", (e) => {
         errorName.innerHTML = "Your email is required";
         errorName.classList.add("error__message");
         return false;
-    } else if (loginPassword <= 3 || loginPassword > 8) {
+    } else if (loginPassword.length <= 3 || loginPassword.length > 8) {
         let errorName = document.getElementById("errorLoginMessage");
         errorName.innerHTML = "Password should not be less than three or greater than eight";
         errorName.classList.add("error__message");

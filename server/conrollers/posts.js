@@ -38,10 +38,12 @@ exports.createPosts = (req, res, next) => {
 exports.getOnePosts = (req, res, next) => {
     const postId = req.params.id;
     Posts.findById(postId).populate("comments").exec((err, foundPost) => {
-        if (err) {
+        if (err || foundPost===null) {
             res.status(500).json({ message: 'This post can not be found' });
         } else {
-            res.json({ foundPost });
+            
+res.json({ foundPost });
+        
         }
     });
 
@@ -74,14 +76,16 @@ exports.deleteOnePosts = (req, res, next) => {
     Posts.findById(postId).then(result => {
         if (!result) {
             res.status(400).json({ message: 'This post has been deleted' });
-        }
-        return Posts.findOneAndDelete(postId).then(deletedone => {
-            res.json({
-                message: "Post deleted successful",
+        }else{
+            return Posts.findOneAndDelete(postId).then(deletedone => {
+                res.json({
+                    message: "Post deleted successful",
+                });
+            }).catch(err => {
+                res.status(400).json({ Error: err.message });
             });
-        }).catch(err => {
-            res.status(400).json({ Error: err.message });
-        });
+        }
+        
 
     }).catch(err => {
         res.status(400).json({ Error: err.message });

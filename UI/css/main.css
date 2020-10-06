@@ -1,6 +1,4 @@
-/* CSS variables */
 
-var(--color, #636e72);
 
 /* universal style */
 
@@ -33,7 +31,7 @@ body {
 
 .header {
     height: 100Vh;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.596)), url(../asset/images/a.png);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.596)), url(../asset/images/aa.png);
     background-repeat: no-repeat;
     background-position: top;
 }
@@ -53,7 +51,7 @@ body {
 
 .heading-primary--main {
     display: block;
-    as font-size: 3.3rem;
+    font-size: 3.3rem;
     font-weight: 700;
     letter-spacing: 1rem;
 }
