@@ -6,6 +6,8 @@ import questionroute from './routes/question';
 import authRoutes from './routes/authRoutes';
 import cookieParser from 'cookie-parser';
 import commentRoutes from './routes/comments';
+import helmet from "helmet";
+import compression from 'compression';
 
 
 const app = express();
@@ -22,6 +24,8 @@ app.use(questionroute);
 app.use(authRoutes);
 app.use(commentRoutes);
 app.use(cookieParser());
+app.use(helmet());
+app.use(compression());
 
 //adding 404 page when page not found and Error handling midle ware
 app.use((req, res, next) => {

@@ -3,11 +3,16 @@
     "version": "1.0.0",
     "description": "Recreated capstone project using nodejs",
     "main": "app.js",
+    "engines":{
+       "node":"12.18.4"
+    },
     "dependencies": {
         "bcrypt": "^5.0.0",
+        "compression": "^1.7.4",
         "cookie-parser": "^1.4.5",
         "express": "^4.17.1",
         "firebase-functions": "^3.11.0",
+        "helmet": "^4.1.1",
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^5.10.6",
         "validator": "^13.1.17"
@@ -20,7 +25,7 @@
         "nodemon": "^2.0.4"
     },
     "scripts": {
-        "start": "nodemon --exec babel-node ./server/app.js",
+        "start": "nodemon --exec babel-node ./server/app",
         "test": "mocha --require @babel/register './test/routes.spec.js'"
     },
     "repository": {
