@@ -13,7 +13,7 @@ import compression from 'compression';
 const app = express();
 
 require('dotenv').config();
-let port = process.env.PORT;
+let port = process.env.PORT || 8000;
 let host = process.env.HOST;
 let db_ur = process.env.DB_URL;
 
